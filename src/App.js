@@ -4,7 +4,7 @@ import { Navbar } from './Components/Navbar/Navbar';
 
 function App() {
   return (
-    <div class="w-4/5 m-auto">
+    <div className="w-4/5 m-auto">
      <Navbar />
     </div>
   );

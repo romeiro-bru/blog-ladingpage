@@ -11,23 +11,25 @@ const icons = [
     {img: medium, link: "https://www.medium.com/", alt: "medium" }
 ]
 
+const pages = [
+    {name: 'LEARN'}, {name: 'BLOG'}, {name: 'BOOKMARKS'}, {name: 'UI KIT'}, {name: 'LAIN NYA'}
+]
+
 export function Navbar() {
     return (
-      <nav class="py-9 px-6 flex justify-between bg-surface">
-           <ul class="flex flex-wrap">
-      <li><img class="w-9" src={logo} alt="logo" /></li>
-      <li class="mx-3 my-2 text-xs font-bold text-surface-low hover:base">LEARN</li>
-      <li class="mx-3 my-2 text-xs font-bold text-surface-low hover:base">BLOG</li>
-      <li class="mx-3 my-2 text-xs font-bold text-surface-low hover:base">BOOKMARKS</li>
-      <li class="mx-3 my-2 text-xs font-bold text-surface-low hover:base">UI KIT</li>
-      <li class="mx-3 my-2 text-xs font-bold text-surface-low hover:base">LAIN NYA</li>
-    </ul>
+      <nav className="py-9 px-6 flex justify-between bg-surface">
+        <ul class="flex flex-wrap">
+            <li><img class="w-9" src={logo} alt="logo" /></li>
+            {pages.map((item, i) => 
+                <li className='mx-3 my-2 text-xs font-bold text-surface-low hover:base"'>{item.name}</li>
+            )}    
+        </ul>
 
     <ul class="flex flex-wrap">
         {icons.map((item, i) => 
-            <li>
+            <li id={i}>
                 <a href={item.link}>
-                    <img class="w-5 m-2" src={item.img} alt={item.alt} />
+                    <img className="w-5 m-2" src={item.img} alt={item.alt} />
                 </a>
             </li>
         )}
