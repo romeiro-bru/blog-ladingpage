@@ -14,6 +14,11 @@ import img22 from '../assets/images/thumb_article22.png';
 import img28 from '../assets/images/thumb_article28.png';
 import img27 from '../assets/images/thumb_article27.png';
 import banner from '../assets/images/learnbanner.png'
+import img21 from '../assets/images/thumb_article21.png';
+import img25 from '../assets/images/thumb_article25.png';
+import img19 from '../assets/images/thumb_article19.png';
+import img18 from '../assets/images/thumb_article18.png';
+import img17 from '../assets/images/thumb_article17.png';
 
 const articles1 = [
     {datetime: "2022-03-27", date: "Maret 27, 2022", title:"Mungkin yang kamu butuhkan saat ini bukan lagi latihan tapi terjun ke industri", img: img30, alt: "man wearing headset and looking at laptop"},
@@ -33,6 +38,14 @@ const articles3 = [
     {datetime: '2022-03-25', date: 'Maret 25, 2022', title: 'Kapan menggunakan Switch atau Single Checkbox?',img: img29, alt:'man reflecting on checkboxes', paragraph: 'Kemiripan konsep Switch dan Single Checkbox sering membuat bingung designer? untuk menentukan kapan menggunakan nya.'},
     {datetime: '2022-03-11', date: 'Maret 11, 2022', title: 'Pertimbangkan branding sebelum menambahkan faktor delightful',img: img26, alt:'men smiling and looking at a screen', paragraph: 'Menambahkan faktor delightful tidak hanya sekedar menambahkan sesuatu yang menyenan gkan tapi juga harus selaras dengan branding.'},
     {datetime: '2022-01-23', date: 'Januari 23, 2022', title: 'Proses design dalam pembuatan data visual',img: img22, alt: 'hand holding a pen', paragraph: 'Ada tahapan sebelum ke pemilihan grafik, seperti mengetahui siapa yang akan membaca data.'}
+]
+const articles4 = [
+    {datetime: '2022-01-20', date: 'Januari 20, 2022', title: 'Membuat Kumpulan referensi UI Design sebagai alat bantu saat membuat design?', img: img21, alt:'men discussing ideas', paragraph: 'Cara saya mengumpulkan dan menggunakan referensi sebagai alat bantu saat membuat UI design.'},
+    {datetime: '2022-02-26', date: 'Februari 26, 2022', title: 'Beberapa pertanyaan saat memulai project design dengan klien',img: img25, alt: 'man showing information from a book', paragraph: 'Cari tahu bisnisnya, Cari tahu apa yang ditawarkan kepada customer, cari tahu kebutuhan project nya.'},
+    {datetime: '2022-08-01',date: 'Januari 08, 2022', title: 'Pembuatan UI Design harus selalu pakai riset?',img: img19, alt: 'woman removing sticky note', paragraph: 'Apakah mengubah bentuk tombol dari kotak menjadi rounded juga harus menggunakan riset? Terlalu memakan waktu enggak sih?'},
+    {datetime: '2022-01-05', date: 'Januari 05, 2022', title: 'UI Designer sebaiknya memahami bisnis klien', img: img18,alt: 'man analyzing charts on tablet', paragraph: 'Memahami bisnis dan mengerti kebutuhan klien adalah pondasi awal untuk membuat design yan baik.'},
+    {datetime: '2022-02-01', date: 'Januari 02, 2022', title: 'Handover File Design Website ke Developer',img: img17, alt: 'group of people looking at notebook', paragraph: 'UI/UX tidak hanya tentang memudahkan user atau pengguna tapi juga memudahkan rekan kerja seperti developer.'},
+    {datetime: '', date: '', title: '', alt: '', paragraph: ''}
 ]
 
 export function Main() {
@@ -91,11 +104,11 @@ export function Main() {
             </ul> 
         </section>
 
-    <section class="px-4 sm:p-14 bg-neutral">
-      <h2 class="font-bold text-primary-neutral-lowest">ARTIKEL TERBARU</h2>
-      <ul class="md:grid grid-cols-3 mt-7">          
+    <section className="px-4 sm:p-14 bg-neutral">
+      <h2 className="font-bold text-primary-neutral-lowest">ARTIKEL TERBARU</h2>
+      <ul className="md:grid grid-cols-3 mt-7">          
         {articles3.map((item, i) => 
-            <li class="mb-8 w-11/12">
+            <li key={i} class="mb-8 w-11/12">
             <article>
                 <figure>
                 <img src={item.img} alt={item.alt} />
@@ -113,6 +126,82 @@ export function Main() {
     <section>
       <img className="w-full" src={banner} alt="banner about figma" />
     </section>
+
+    <section className="md:flex px-4 sm:p-14 bg-neutral">
+      <div className="md:mr-10">
+      <h2 className="mb-8 font-bold text-primary-base-lowest">ARTIKEL LAINNYA</h2>
+      <ul>
+        {articles4.map((item, i) => 
+        <li key={i}>
+          <article className="mb-8 md:flex">
+            <div>
+              <time className="my-3 text-xs font-bold text-primary-base-lowest" datetime={item.datetime}>{item.date}</time>
+              <h3 className="mb-3 text-xl font-bold text-primary">{item.title}</h3>
+              <p className="text-sm font-bold text-primary-base-low">{item.paragraph}</p>
+            </div>
+            <img className="md:ml-8 md:w-5/12 mt-8" src={item.img} alt={item.alt} />          
+          </article>
+        </li>        
+        )}      
+      </ul>
+    </div>
+
+
+      <aside class="md:w-9/12">
+        <h2 class="mb-8 font-bold text-primary-base-lowest">ARSIP 2021</h2>
+        <ul class="divide-y">
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-26-12">Desember 26</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Langkah Membuat Dashboard Responsive</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-08-13">Agustus 13</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Belajar pola design dari mencoba aplikasi</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-27-07">Juli 27</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Cara cepat belajar design landing page</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-04-13">April 13</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Eksplorasi design presentasi dengan Figma</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-16-03">Maret 16</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Mengenai benar dan salah pada UI Design</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-26-12">Maret 15</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Tentang Creativity Block pada UI Designer</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-03-01">Maret 01</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Memilih foto yang cocok untuk desain website</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-28-02">Februari 28</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Membuat Desain header yang proporsional</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-28-02">Februari 28</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Sebaiknya Belajar UI Design mulai dari mana?</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-23-02">Februari 23</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Sebaiknya Belajar UI Design mulai dari mana?</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-21-02">Februari 21</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Beberapa Pertanyaan tentang terjun di industri UI/UX</h3>
+          </li>
+          <li class="p-4">
+            <span><time class="my-3 text-xs font-bold text-primary-base-lowest" datetime="2021-18-02">Februari 18</time></span>
+            <h3 class="font-bold text-sm text-primary-base-low">Dari Website Programmer Menjadi UI Designer</h3>
+          </li>
+        </ul>
+      </aside> 
+
+  </section>
     </main>
     )
 }
