@@ -18,7 +18,7 @@ export function Aside() {
         <h2 className="mb-8 font-bold text-primary-base-lowest">ARSIP 2021</h2>
         <ul className="divide-y">
             {asideList.map((item, i) => 
-                <li className="p-4">
+                <li key={i} className="p-4">
                     <span><time className="my-3 text-xs font-bold text-primary-base-lowest" dateTime={item.datetime}>{item.date}</time></span>
                     <h3 className="font-bold text-sm text-primary-base-low">{item.title}</h3>
                 </li>
