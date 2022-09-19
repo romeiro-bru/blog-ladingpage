@@ -53,7 +53,7 @@ const articles4 = [
 export function Main() {
     return(
     <main className="bg-base">
-        <section class="p-4 sm:px-14 pb-20 bg-surface">
+        <section className="p-4 sm:px-14 pb-20 bg-surface">
         <img className="mb-12 border-y-2 border-primary w-fit py-8 m-auto" src={blog} alt="the blog" />     
 
       <div className="md:flex">
@@ -110,16 +110,16 @@ export function Main() {
       <h2 className="font-bold text-primary-neutral-lowest">ARTIKEL TERBARU</h2>
       <ul className="md:grid grid-cols-3 mt-7">          
         {articles3.map((item, i) => 
-            <li key={i} class="mb-8 w-11/12">
+            <li key={i} className="mb-8 w-11/12">
             <article>
                 <figure>
                 <img src={item.img} alt={item.alt} />
-                <figcaption class="my-3 text-xs font-bold text-primary-neutral-low">
+                <figcaption className="my-3 text-xs font-bold text-primary-neutral-low">
                     <time dateTime={item.datetime}>{item.date}</time>
                 </figcaption>
                 </figure>
                 <h3 className="mb-5 text-xl font-bold text-primary">{item.title}</h3>
-                <p class="text-sm font-bold text-primary-neutral-low">{item.paragraph}</p>
+                <p className="text-sm font-bold text-primary-neutral-low">{item.paragraph}</p>
             </article>
             </li>
          )}
