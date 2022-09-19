@@ -21,6 +21,8 @@ import img19 from '../../assets/images/thumb_article19.png';
 import img18 from '../../assets/images/thumb_article18.png';
 import img17 from '../../assets/images/thumb_article17.png';
 
+import imgNames from './images';
+
 const articles1 = [
     {datetime: "2022-03-27", date: "Maret 27, 2022", title:"Mungkin yang kamu butuhkan saat ini bukan lagi latihan tapi terjun ke industri", img: img30, alt: "man wearing headset and looking at laptop"},
     {datetime: "2022-02-15", date: "Februari 15, 2022", title: "Proses membuant layout dan komposisi pada UI Design", img: img24 , alt: "hands holding magic cube"},
@@ -48,7 +50,6 @@ const articles4 = [
     {datetime: '2022-02-01', date: 'Januari 02, 2022', title: 'Handover File Design Website ke Developer',img: img17, alt: 'group of people looking at notebook', paragraph: 'UI/UX tidak hanya tentang memudahkan user atau pengguna tapi juga memudahkan rekan kerja seperti developer.'},
     {datetime: '', date: '', title: '', alt: '', paragraph: ''}
 ]
-
 export function Main() {
     return(
     <main className="bg-base">
@@ -114,7 +115,7 @@ export function Main() {
                 <figure>
                 <img src={item.img} alt={item.alt} />
                 <figcaption class="my-3 text-xs font-bold text-primary-neutral-low">
-                    <time datetime={item.datetime}>{item.date}</time>
+                    <time dateTime={item.datetime}>{item.date}</time>
                 </figcaption>
                 </figure>
                 <h3 className="mb-5 text-xl font-bold text-primary">{item.title}</h3>
@@ -136,7 +137,7 @@ export function Main() {
         <li key={i}>
           <article className="mb-8 md:flex">
             <div>
-              <time className="my-3 text-xs font-bold text-primary-base-lowest" datetime={item.datetime}>{item.date}</time>
+              <time className="my-3 text-xs font-bold text-primary-base-lowest" dateTime={item.datetime}>{item.date}</time>
               <h3 className="mb-3 text-xl font-bold text-primary">{item.title}</h3>
               <p className="text-sm font-bold text-primary-base-low">{item.paragraph}</p>
             </div>
