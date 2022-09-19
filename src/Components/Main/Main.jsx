@@ -1,24 +1,25 @@
-import blog from '../assets/icons/Group.png';
-import img20 from '../assets/images/thumb_article20.png';
-import img30 from '../assets/images/thumb_article30.png';
-import img24 from '../assets/images/thumb_article24.png';
-import img12 from '../assets/images/thumb_article12.png';
-import img23 from '../assets/images/thumb_article23.png';
-import img15 from '../assets/images/thumb_article15.png';
-import img4 from '../assets/images/thumb_article4.png';
-import img14 from '../assets/images/thumb_article14.png';
-import img31 from '../assets/images/thumb_article31.png';
-import img29 from '../assets/images/thumb_article29.png';
-import img26 from '../assets/images/thumb_article22.png';
-import img22 from '../assets/images/thumb_article22.png';
-import img28 from '../assets/images/thumb_article28.png';
-import img27 from '../assets/images/thumb_article27.png';
-import banner from '../assets/images/learnbanner.png'
-import img21 from '../assets/images/thumb_article21.png';
-import img25 from '../assets/images/thumb_article25.png';
-import img19 from '../assets/images/thumb_article19.png';
-import img18 from '../assets/images/thumb_article18.png';
-import img17 from '../assets/images/thumb_article17.png';
+import {Aside} from './Aside';
+import blog from '../../assets/icons/Group.png';
+import img20 from '../../assets/images/thumb_article20.png';
+import img30 from '../../assets/images/thumb_article30.png';
+import img24 from '../../assets/images/thumb_article24.png';
+import img12 from '../../assets/images/thumb_article12.png';
+import img23 from '../../assets/images/thumb_article23.png';
+import img15 from '../../assets/images/thumb_article15.png';
+import img4 from '../../assets/images/thumb_article4.png';
+import img14 from '../../assets/images/thumb_article14.png';
+import img31 from '../../assets/images/thumb_article31.png';
+import img29 from '../../assets/images/thumb_article29.png';
+import img26 from '../../assets/images/thumb_article22.png';
+import img22 from '../../assets/images/thumb_article22.png';
+import img28 from '../../assets/images/thumb_article28.png';
+import img27 from '../../assets/images/thumb_article27.png';
+import banner from '../../assets/images/learnbanner.png'
+import img21 from '../../assets/images/thumb_article21.png';
+import img25 from '../../assets/images/thumb_article25.png';
+import img19 from '../../assets/images/thumb_article19.png';
+import img18 from '../../assets/images/thumb_article18.png';
+import img17 from '../../assets/images/thumb_article17.png';
 
 const articles1 = [
     {datetime: "2022-03-27", date: "Maret 27, 2022", title:"Mungkin yang kamu butuhkan saat ini bukan lagi latihan tapi terjun ke industri", img: img30, alt: "man wearing headset and looking at laptop"},
@@ -46,20 +47,6 @@ const articles4 = [
     {datetime: '2022-01-05', date: 'Januari 05, 2022', title: 'UI Designer sebaiknya memahami bisnis klien', img: img18,alt: 'man analyzing charts on tablet', paragraph: 'Memahami bisnis dan mengerti kebutuhan klien adalah pondasi awal untuk membuat design yan baik.'},
     {datetime: '2022-02-01', date: 'Januari 02, 2022', title: 'Handover File Design Website ke Developer',img: img17, alt: 'group of people looking at notebook', paragraph: 'UI/UX tidak hanya tentang memudahkan user atau pengguna tapi juga memudahkan rekan kerja seperti developer.'},
     {datetime: '', date: '', title: '', alt: '', paragraph: ''}
-]
-const asideList = [
-    {datetime: '2021-26-12', date: 'Desember 26', title: 'Langkah Membuat Dashboard Responsive'},
-    {datetime: '2021-08-13', date: 'Agustus 13', title: 'Belajar pola design dari mencoba aplikasi'},
-    {datetime: '2021-27-07', date: 'Juli 27', title: 'Cara cepat belajar design landing page'},
-    {datetime: '2021-04-13', date: 'April 13', title: 'Eksplorasi design presentasi dengan Figma'},
-    {datetime: '2021-16-03', date: 'Maret 16', title: 'Mengenai benar dan salah pada UI Design'},
-    {datetime: '2021-26-12', date: 'Maret 15', title: 'Tentang Creativity Block pada UI Designer'},
-    {datetime: '2021-03-01', date: 'Maret 01', title: 'Memilih foto yang cocok untuk desain website'},
-    {datetime: '2021-28-02', date: 'Februari 28', title: 'Membuat Desain header yang proporsional'},
-    {datetime: '2021-28-02', date: 'Februari 28', title: 'Sebaiknya Belajar UI Design mulai dari mana?'},
-    {datetime: '2021-23-02', date: 'Februari 23', title: 'Sebaiknya Belajar UI Design mulai dari mana?'},
-    {datetime: '2021-21-02', date: 'Februari 21', title: 'Beberapa Pertanyaan tentang terjun di industri UI/UX'},
-    {datetime: '2021-18-02', date: 'Februari 18', title: 'Dari Website Programmer Menjadi UI Designer'},
 ]
 
 export function Main() {
@@ -159,18 +146,7 @@ export function Main() {
         )}      
       </ul>
     </div>
-
-      <aside className="md:w-9/12">
-        <h2 className="mb-8 font-bold text-primary-base-lowest">ARSIP 2021</h2>
-        <ul className="divide-y">
-            {asideList.map((item, i) => 
-                <li className="p-4">
-                    <span><time className="my-3 text-xs font-bold text-primary-base-lowest" datetime={item.datetime}>{item.date}</time></span>
-                    <h3 className="font-bold text-sm text-primary-base-low">{item.title}</h3>
-                </li>
-            )}  
-        </ul>     
-      </aside> 
+    <Aside />
   </section>
     </main>
     )

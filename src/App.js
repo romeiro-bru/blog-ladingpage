@@ -1,6 +1,5 @@
 import { Navbar } from './Components/Navbar';
-import {Main} from './Components/Main';
-
+import {Main} from './Components/Main/Main';
 
 function App() {
   return (
