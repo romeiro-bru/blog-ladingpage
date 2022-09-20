@@ -1,4 +1,4 @@
-import allContents from "./contentList";
+import allContents from "../contentList";
 import { Aside } from './Aside';
 
 export function FourthContainer() {
