@@ -3,7 +3,7 @@ import banner from '../../assets/images/learnbanner.png'
 import { FirstContainer } from './Containers/FirstContainer';
 import { SecondContainer } from './Containers/SecondContainer';
 import { ThirdContainer } from './Containers/ThirdContainer';
-import { FourthContainer } from './Containers/FourthContainer';
+import { FourthContainer } from './Containers/FouthContainer/FourthContainer';
 
 export function Main() {
     return (
