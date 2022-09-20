@@ -10,11 +10,9 @@ export function Main() {
         <main>
             <FirstContainer />
             <SecondContainer />
-            <ThirdContainer />              
-            <section>
-                <img className="w-full" src={banner} alt="banner about figma" />
-            </section>
-            <FourthContainer />       
+            <ThirdContainer />
+            <img className="w-full" src={banner} alt="banner about figma" />
+            <FourthContainer />
         </main>
     )
 }
