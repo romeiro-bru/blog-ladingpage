@@ -25,7 +25,6 @@ const articles4 = [
     {datetime: '2022-08-01',date: 'Januari 08, 2022', title: 'Pembuatan UI Design harus selalu pakai riset?',img: images.img19, alt: 'woman removing sticky note', paragraph: 'Apakah mengubah bentuk tombol dari kotak menjadi rounded juga harus menggunakan riset? Terlalu memakan waktu enggak sih?'},
     {datetime: '2022-01-05', date: 'Januari 05, 2022', title: 'UI Designer sebaiknya memahami bisnis klien', img: images.img18,alt: 'man analyzing charts on tablet', paragraph: 'Memahami bisnis dan mengerti kebutuhan klien adalah pondasi awal untuk membuat design yan baik.'},
     {datetime: '2022-02-01', date: 'Januari 02, 2022', title: 'Handover File Design Website ke Developer',img: images.img17, alt: 'group of people looking at notebook', paragraph: 'UI/UX tidak hanya tentang memudahkan user atau pengguna tapi juga memudahkan rekan kerja seperti developer.'},
-    {datetime: '', date: '', title: '', alt: '', paragraph: ''}
 ]
 
 const allArticles = {

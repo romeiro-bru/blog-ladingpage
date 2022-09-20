@@ -4,7 +4,7 @@ import allArticles from './articleLists';
 
 export function Main() {
     return(
-    <main className="bg-base">
+    <main>
         <section className="p-4 sm:px-14 pb-20 bg-surface">
         <img className="mb-12 border-y-2 border-primary w-fit py-8 m-auto" src={images.blog} alt="the blog" />     
 
@@ -81,7 +81,7 @@ export function Main() {
       <img className="w-full" src={images.banner} alt="banner about figma" />
     </section>
 
-    <section className="md:flex px-4 sm:p-14 bg-neutral">
+    <section className="md:flex px-4 sm:p-14 bg-base">
       <div className="md:mr-10">
       <h2 className="mb-8 font-bold text-primary-base-lowest">ARTIKEL LAINNYA</h2>
       <ul>
