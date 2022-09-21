@@ -3,7 +3,7 @@ import images from './images';
 
 export function FirstContainer() {
     return(
-        <div className="p-4 sm:px-14 pb-20 bg-surface">
+        <section className="p-4 sm:px-14 pb-20 bg-surface">
                 <img className="mb-12 border-y-2 border-primary w-fit py-8 m-auto" src={images.blog} alt="the blog" />
 
                 <div className="md:flex">
@@ -34,6 +34,6 @@ export function FirstContainer() {
                         )}
                     </ul>
                 </div>
-            </div>
+            </section>
     )
 }

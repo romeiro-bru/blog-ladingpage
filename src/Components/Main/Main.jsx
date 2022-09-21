@@ -11,7 +11,9 @@ export function Main() {
             <FirstContainer />
             <SecondContainer />
             <ThirdContainer />
-            <img className="w-full" src={banner} alt="banner about figma" />
+            <figure>
+                <img className="w-full" src={banner} alt="banner about figma" />
+            </figure>
             <FourthContainer />
         </main>
     )
