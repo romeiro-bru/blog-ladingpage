@@ -27,6 +27,15 @@ const content4 = [
     {datetime: '2022-02-01', date: 'Januari 02, 2022', title: 'Handover File Design Website ke Developer',img: images.img17, alt: 'group of people looking at notebook', paragraph: 'UI/UX tidak hanya tentang memudahkan user atau pengguna tapi juga memudahkan rekan kerja seperti developer.'},
 ]
 
+export type ContentProps = {
+    datetime: string;
+    date: string;
+    title: string;
+    img: string;
+    alt: string;
+    paragraph: string;
+}
+
 const allContents = {
     content1: content1,
     content2: content2,

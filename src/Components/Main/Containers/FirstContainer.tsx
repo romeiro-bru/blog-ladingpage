@@ -1,7 +1,22 @@
+import { useState, useEffect } from "react";
 import allContents from "./contentList";
 import images from './images';
 
+type Content1Props = {
+    datetime: string;
+    date: string;
+    title: string;
+    img: string;
+    alt: string;
+}
+
 export function FirstContainer() {
+    const [contents, setContents] = useState<Content1Props[]>([])
+
+    useEffect(() => {
+        setContents(allContents.content1)
+    }, [])
+
     return(
         <section className="p-4 sm:px-14 pb-20 bg-surface">
                 <img className="mb-12 border-y-2 border-primary w-fit py-8 m-auto" src={images.blog} alt="the blog" />
@@ -21,7 +36,7 @@ export function FirstContainer() {
                     </article>
 
                     <ul className=" md:w-6/12 divide-y divide-primary">
-                        {allContents.content1.map((item, i) =>
+                        {contents.map((item, i) =>
                             <li className="pb-4" key={i}>
                                 <article className="md:flex">
                                     <img className="md:h-2/6 md:w-5/12 mt-2 md:mr-4 sm:mb-6 md:mb-0" src={item.img} alt={item.alt} />

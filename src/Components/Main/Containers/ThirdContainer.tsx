@@ -1,11 +1,19 @@
+import { useState, useEffect } from "react";
 import allContents from "./contentList";
+import {ContentProps} from './contentList';
 
 export function ThirdContainer() {
+    const [contents, setContents] = useState<ContentProps[]>([])
+
+    useEffect(() => {
+        setContents(allContents.content3)
+    } , [])
+
     return(
         <section className="px-4 sm:p-14 bg-neutral">
         <h2 className="font-bold text-primary-neutral-lowest">ARTIKEL TERBARU</h2>
         <ul className="md:grid grid-cols-3 mt-7">
-            {allContents.content3.map((item, i) =>
+            {contents.map((item, i) =>
                 <li key={i} className="mb-8 w-11/12">
                     <article>
                         <figure>
