@@ -1,13 +1,21 @@
+import { useState, useEffect } from "react";
 import allContents from "../contentList";
+import { ContentProps} from "../contentList";
 import { Aside } from './Aside';
 
 export function FourthContainer() {
+    const [contents, setContents] = useState<ContentProps[]>([])
+
+    useEffect(() => {
+        setContents(allContents.content4)
+    }, [])
+
     return(
         <section className="md:flex px-4 sm:p-14 bg-base">
         <div className="md:mr-10">
             <h2 className="mb-8 font-bold text-primary-base-lowest">ARTIKEL LAINNYA</h2>
             <ul>
-                {allContents.content4.map((item, i) =>
+                {contents.map((item, i) =>
                     <li key={i}>
                         <article className="mb-8 md:flex">
                             <div>

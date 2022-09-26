@@ -1,4 +1,3 @@
-import React from 'react';
 import { FirstContainer } from './Containers/FirstContainer';
 import { SecondContainer } from './Containers/SecondContainer';
 import { ThirdContainer } from './Containers/ThirdContainer';

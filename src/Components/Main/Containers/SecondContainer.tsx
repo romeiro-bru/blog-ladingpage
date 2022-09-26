@@ -1,12 +1,19 @@
-import React from 'react';
+import { useState, useEffect  } from "react";
+import { ContentProps } from "./contentList";
 import allContents from "./contentList";
 
 export function SecondContainer() {
+    const [contents, setContents] = useState<ContentProps[]>([])
+
+    useEffect(() => {
+        setContents(allContents.content2)
+    }, [])
+
     return(
         <section className="p-4 sm:p-14 bg-base">
         <h2 className="font-bold text-primary-base-lowest">PILIHAN EDITOR</h2>
         <ul className="mt-7 md:flex flex-wrap md:divide-x">
-            {allContents.content2.map((item, i) =>
+            {contents.map((item, i) =>
                 <li key={i} className="md:w-1/4 px-6 md:pr-6">
                     <article>
                         <figure>

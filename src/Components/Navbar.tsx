@@ -1,4 +1,3 @@
-import React from 'react';
 const logo = require('../assets/icons/logo.png');
 const twitter = require('../assets/icons/twitter.png');
 const instagram = require('../assets/icons/instagram.png');
