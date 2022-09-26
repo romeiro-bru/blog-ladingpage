@@ -1,3 +1,4 @@
+import React from 'react';
 import allContents from "./contentList";
 
 export function ThirdContainer() {
