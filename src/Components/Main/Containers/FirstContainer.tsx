@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
+import { ContentProps } from "./contentList";
 import allContents from "./contentList";
 import images from './images';
 
-type Content1Props = {
-    datetime: string;
-    date: string;
-    title: string;
-    img: string;
-    alt: string;
-}
-
 export function FirstContainer() {
-    const [contents, setContents] = useState<Content1Props[]>([])
+    const [contents, setContents] = useState<ContentProps[]>([])
 
     useEffect(() => {
         setContents(allContents.content1)

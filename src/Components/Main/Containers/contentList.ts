@@ -33,7 +33,7 @@ export type ContentProps = {
     title: string;
     img: string;
     alt: string;
-    paragraph: string;
+    paragraph?: string;
 }
 
 const allContents = {
