@@ -1,8 +1,9 @@
-import logo from '../assets/icons/logo.png';
-import twitter from '../assets/icons/twitter.png';
-import instagram from '../assets/icons/instagram.png';
-import dribbble from '../assets/icons/dribbble.png';
-import medium from '../assets/icons/medium.png';
+import React from 'react';
+const logo = require('../assets/icons/logo.png');
+const twitter = require('../assets/icons/twitter.png');
+const instagram = require('../assets/icons/instagram.png');
+const dribbble = require('../assets/icons/dribbble.png');
+const medium = require('../assets/icons/medium.png');
 
 const icons = [
     {img: twitter, link: "https://twitter.com/", alt: "twitter"},

@@ -1,9 +1,9 @@
-import banner from '../../assets/images/learnbanner.png'
-
+import React from 'react';
 import { FirstContainer } from './Containers/FirstContainer';
 import { SecondContainer } from './Containers/SecondContainer';
 import { ThirdContainer } from './Containers/ThirdContainer';
 import { FourthContainer } from './Containers/FouthContainer/FourthContainer';
+const banner  = require('../../assets/images/learnbanner.png');
 
 export function Main() {
     return (
